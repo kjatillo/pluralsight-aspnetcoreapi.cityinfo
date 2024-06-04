@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mUuLiW3OFcBWnyHDhXgxPBtrI3sJ8Oj54hdBO29ei9w=",
+  "Source": "Pluralsight.AspNetCoreWebApi.CityInfo",
+  "BasePath": "_content/Pluralsight.AspNetCoreWebApi.CityInfo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

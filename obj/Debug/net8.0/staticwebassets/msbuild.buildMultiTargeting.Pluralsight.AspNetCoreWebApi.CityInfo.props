@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Pluralsight.AspNetCoreWebApi.CityInfo.props" />
+</Project>
