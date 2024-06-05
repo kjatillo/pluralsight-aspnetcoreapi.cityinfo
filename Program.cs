@@ -41,7 +41,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
             builder.Services.AddSingleton<CitiesDataStore>();
 
             builder.Services.AddDbContext<CityInfoContext>(dbContextOptions =>
-                dbContextOptions.UseSqlite("Data Source=CityInfo.db"));
+                dbContextOptions.UseSqlite(builder.Configuration["ConnectionStrings:CityInfoDBConnectionString"]));
 
 #if DEBUG
             builder.Services.AddTransient<IMailService, LocalMailService>();
