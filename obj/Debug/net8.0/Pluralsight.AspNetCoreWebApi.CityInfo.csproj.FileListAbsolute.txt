@@ -31,3 +31,4 @@ E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\obj\Debug\net8.0\Plura
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\obj\Debug\net8.0\Pluralsight.AspNetCoreWebApi.CityInfo.genruntimeconfig.cache
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\obj\Debug\net8.0\ref\Pluralsight.AspNetCoreWebApi.CityInfo.dll
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\obj\Debug\net8.0\Pluralsight.AspNetCoreWebApi.CityInfo.sourcelink.json
+E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\getting-started-with-rest-slides.pdf

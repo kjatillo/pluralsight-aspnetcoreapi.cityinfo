@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.StaticFiles;
+
 namespace Pluralsight.AspNetCoreWebApi.CityInfo
 {
     public class Program
@@ -7,14 +9,16 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllers();  // Registers services for supporting controllers
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            // Registers services for supporting controllers
             builder.Services.AddControllers(options =>
             {
                 options.ReturnHttpNotAcceptable = true;  // return a 406 response when the client requests an unsupported media type
-            });
+            }).AddXmlDataContractSerializerFormatters();  // adds support for XML
+
+            builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
             #region Manipulating Error Response
             builder.Services.AddProblemDetails(options =>
