@@ -20,15 +20,17 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
 
             builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
+            builder.Services.AddProblemDetails();
+
             #region Manipulating Error Response
-            builder.Services.AddProblemDetails(options =>
-            {
-                options.CustomizeProblemDetails = ctx =>
-                {
-                    ctx.ProblemDetails.Extensions.Add("additionalInfo", "Additional Info Example");
-                    ctx.ProblemDetails.Extensions.Add("server", Environment.MachineName);
-                };
-            });
+            //builder.Services.AddProblemDetails(options =>
+            //{
+            //    options.CustomizeProblemDetails = ctx =>
+            //    {
+            //        ctx.ProblemDetails.Extensions.Add("additionalInfo", "Additional Info Example");
+            //        ctx.ProblemDetails.Extensions.Add("server", Environment.MachineName);
+            //    };
+            //});
             #endregion
 
             var app = builder.Build();
