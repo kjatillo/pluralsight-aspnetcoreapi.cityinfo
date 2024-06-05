@@ -70,5 +70,29 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
                 },
                 finalPointOfInterest);
         }
+
+        [HttpPut("{pointOfInterestId}")]
+        public ActionResult UpdatePointOfInterest(int cityId, int pointOfInterestId, 
+            PointOfInterestForUpdate pointOfInterestForUpdate)
+        {
+            // If the city is not found, return 404
+            var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == cityId);
+            if (city == null)
+            {
+                return NotFound();
+            }
+
+            // If the point of interest is not found, return 404
+            var pointOfInterestFromStore = city.PointsOfInterest.FirstOrDefault(c => c.Id == pointOfInterestId);
+            if (pointOfInterestFromStore == null)
+            {
+                return NotFound();
+            }
+
+            pointOfInterestFromStore.Name = pointOfInterestForUpdate.Name;
+            pointOfInterestFromStore.Description = pointOfInterestForUpdate.Description;
+
+            return NoContent();  // Returns nothing
+        }
     }
 }
