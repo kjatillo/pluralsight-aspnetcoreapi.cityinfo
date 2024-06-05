@@ -7,16 +7,23 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
     [Route("api/[controller]")]  // use [Route("api/cities")] to make the route more specific, controller takes the name of the controller class
     public class CitiesController : ControllerBase
     {
+        private readonly CitiesDataStore _citiesDataStore;
+
+        public CitiesController(CitiesDataStore citiesDataStore)
+        {
+            _citiesDataStore = citiesDataStore;
+        }
+
         [HttpGet]
         public ActionResult<IEnumerable<City>> GetCities()
         {
-            return Ok(CitiesDataStore.Current.Cities);
+            return Ok(_citiesDataStore.Cities);
         }
 
         [HttpGet("{id}")]
         public ActionResult<City> GetCity(int id)
         {
-            var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == id);
+            var city = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == id);
 
             if (city == null)
             {

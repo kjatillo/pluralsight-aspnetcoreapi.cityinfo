@@ -5,7 +5,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
     public class CitiesDataStore
     {
         public List<City> Cities { get; set; }
-        public static CitiesDataStore Current { get; } = new CitiesDataStore();
+        // public static CitiesDataStore Current { get; } = new CitiesDataStore();
 
         public CitiesDataStore()
         {

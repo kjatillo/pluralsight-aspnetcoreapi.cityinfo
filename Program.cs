@@ -16,40 +16,39 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
                 .CreateLogger();
 
             var builder = WebApplication.CreateBuilder(args);
-            
+
             builder.Host.UseSerilog();
 
-            // Add services to the container.
+            #region Services
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             // Registers services for supporting controllers
+            // ReturnHttpNotAcceptable - returns 406 response when the client requests an unsupported media type
+            // AddNewtonsoftJson - input/output formatters for JSON and JSON PATCH that use JSON.NET
+            // AddXmlDataContractSerializerFormatters - adds support for XML
             builder.Services.AddControllers(options =>
             {
-                options.ReturnHttpNotAcceptable = true;  // return a 406 response when the client requests an unsupported media type
-            }).AddNewtonsoftJson()  // Input/Output formatters for JSON and JSON PATCH that use JSON.NET
-              .AddXmlDataContractSerializerFormatters();  // adds support for XML
+                options.ReturnHttpNotAcceptable = true;
+            }).AddNewtonsoftJson()
+              .AddXmlDataContractSerializerFormatters();
+
+            builder.Services.AddProblemDetails();  // Custom reponse can also be added
 
             builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
-            builder.Services.AddProblemDetails();  // Also add a better output when an exception is handled
+            builder.Services.AddSingleton<CitiesDataStore>();
 
-            builder.Services.AddTransient<LocalMainService>();
-
-            #region Manipulating Error Response
-            //builder.Services.AddProblemDetails(options =>
-            //{
-            //    options.CustomizeProblemDetails = ctx =>
-            //    {
-            //        ctx.ProblemDetails.Extensions.Add("additionalInfo", "Additional Info Example");
-            //        ctx.ProblemDetails.Extensions.Add("server", Environment.MachineName);
-            //    };
-            //});
-            #endregion
-
+#if DEBUG
+            builder.Services.AddTransient<IMailService, LocalMailService>();
+#else
+            builder.Services.AddTransient<IMailService, CloudMailService>();
+#endif
+            #endregion Services
+            
+            #region Pipeline
             var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
+            
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler();
@@ -69,12 +68,8 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
 
             app.MapControllers();  // Where the selected endpoint is executed
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllers();
-            //}); // Old way of doing it
-
             app.Run();
+            #endregion Pipeline
         }
     }
 }
