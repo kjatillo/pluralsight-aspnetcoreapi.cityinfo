@@ -21,7 +21,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
 
             builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
-            builder.Services.AddProblemDetails();
+            builder.Services.AddProblemDetails();  // Also add a better output when an exception is handled
 
             #region Manipulating Error Response
             //builder.Services.AddProblemDetails(options =>
@@ -37,6 +37,11 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler();
+            }
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
