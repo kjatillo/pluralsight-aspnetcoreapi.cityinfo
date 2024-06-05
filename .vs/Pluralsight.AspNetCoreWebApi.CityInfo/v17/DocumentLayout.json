@@ -11,6 +11,14 @@
       "RelativeMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|e:\\programming\\.net\\pluralsight.aspnetcorewebapi.cityinfo\\services\\localmainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|solutionrelative:services\\localmainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|e:\\programming\\.net\\pluralsight.aspnetcorewebapi.cityinfo\\logs\\cityinfo20240605.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|solutionrelative:logs\\cityinfo20240605.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|e:\\programming\\.net\\pluralsight.aspnetcorewebapi.cityinfo\\models\\pointofinterest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|solutionrelative:models\\pointofinterest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -22,11 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "LocalMainService.cs",
+              "DocumentMoniker": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\LocalMainService.cs",
+              "RelativeDocumentMoniker": "Services\\LocalMainService.cs",
+              "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\LocalMainService.cs",
+              "RelativeToolTip": "Services\\LocalMainService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T20:50:34.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "cityinfo20240605.txt",
+              "DocumentMoniker": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\logs\\cityinfo20240605.txt",
+              "RelativeDocumentMoniker": "logs\\cityinfo20240605.txt",
+              "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\logs\\cityinfo20240605.txt",
+              "RelativeToolTip": "logs\\cityinfo20240605.txt",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAA8AAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-06-05T20:46:06.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PointOfInterest.cs",
               "DocumentMoniker": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Models\\PointOfInterest.cs",
               "RelativeDocumentMoniker": "Models\\PointOfInterest.cs",
@@ -45,7 +79,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA7wCQAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-05T15:31:39.076Z",
               "EditorCaption": ""
@@ -58,7 +92,7 @@
               "RelativeDocumentMoniker": "Controllers\\PointsOfInterestController.cs",
               "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Controllers\\PointsOfInterestController.cs",
               "RelativeToolTip": "Controllers\\PointsOfInterestController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAA0wBQAAABeAAAA",
+              "ViewState": "AQIAAJcAAAAAAAAAAAAiwLUAAAB4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-05T15:16:55.202Z",
               "EditorCaption": ""

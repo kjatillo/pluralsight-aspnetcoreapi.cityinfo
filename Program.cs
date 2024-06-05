@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.StaticFiles;
+using Pluralsight.AspNetCoreWebApi.CityInfo.Services;
 using Serilog;
 
 namespace Pluralsight.AspNetCoreWebApi.CityInfo
@@ -32,6 +33,8 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
             builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
             builder.Services.AddProblemDetails();  // Also add a better output when an exception is handled
+
+            builder.Services.AddTransient<LocalMainService>();
 
             #region Manipulating Error Response
             //builder.Services.AddProblemDetails(options =>
