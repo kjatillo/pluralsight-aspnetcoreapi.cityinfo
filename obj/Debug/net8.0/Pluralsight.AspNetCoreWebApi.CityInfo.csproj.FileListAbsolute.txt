@@ -46,3 +46,4 @@ E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Seril
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Serilog.Sinks.File.dll
+E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\appsettings.Production.json
