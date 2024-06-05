@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Pluralsight.AspNetCoreWebApi.CityInfo.Models;
+using System.Runtime.CompilerServices;
 
 namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
 {
@@ -8,6 +9,13 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
     [Route("api/cities/{cityId}/[controller]")]
     public class PointsOfInterestController : ControllerBase
     {
+        private readonly ILogger<PointsOfInterestController> _logger;
+
+        public PointsOfInterestController(ILogger<PointsOfInterestController> logger)
+        {
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        }
+
         [HttpGet]
         public ActionResult<IEnumerable<PointOfInterest>> GetPointsOfInterest(int cityId)
         {
@@ -15,6 +23,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
 
             if (city == null)
             {
+                _logger.LogInformation($"City with id {cityId} was not found when accessing points of interest");
                 return NotFound();
             }
 
@@ -120,6 +129,8 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
                 };
 
             patchDocument.ApplyTo(pointOfInterestToPatch, ModelState);
+
+            // ModelState is a dictionary containing both state of the model and model-binding validation
 
             // If an input is invalid, return 400
             if (!ModelState.IsValid)
