@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.StaticFiles;
+using Serilog;
 
 namespace Pluralsight.AspNetCoreWebApi.CityInfo
 {
@@ -6,7 +7,16 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
     {
         public static void Main(string[] args)
         {
+            // Serilog logger configuration
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.Console()
+                .WriteTo.File("logs/cityinfo.txt", rollingInterval: RollingInterval.Day)
+                .CreateLogger();
+
             var builder = WebApplication.CreateBuilder(args);
+            
+            builder.Host.UseSerilog();
 
             // Add services to the container.
             builder.Services.AddEndpointsApiExplorer();
