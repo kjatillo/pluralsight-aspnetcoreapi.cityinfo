@@ -16,7 +16,8 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
             builder.Services.AddControllers(options =>
             {
                 options.ReturnHttpNotAcceptable = true;  // return a 406 response when the client requests an unsupported media type
-            }).AddXmlDataContractSerializerFormatters();  // adds support for XML
+            }).AddNewtonsoftJson()  // Input/Output formatters for JSON and JSON PATCH that use JSON.NET
+              .AddXmlDataContractSerializerFormatters();  // adds support for XML
 
             builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
