@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.JsonPatch;
+﻿using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Pluralsight.AspNetCoreWebApi.CityInfo.Models;
 
@@ -107,7 +106,6 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
                 return NotFound();
             }
 
-            // If the point of interest is not found, return 404
             var pointOfInterestFromStore = city.PointsOfInterest.FirstOrDefault(c => c.Id == pointOfInterestId);
             if (pointOfInterestFromStore == null)
             {
@@ -150,7 +148,6 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
                 return NotFound();
             }
 
-            // If the point of interest is not found, return 404
             var pointOfInterestFromStore = city.PointsOfInterest.FirstOrDefault(c => c.Id == pointOfInterestId);
             if (pointOfInterestFromStore == null)
             {
@@ -161,6 +158,5 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
 
             return NoContent();
         }
-
     }
 }
