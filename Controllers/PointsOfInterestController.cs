@@ -23,7 +23,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<PointOfInterest>> GetPointsOfInterest(int cityId)
+        public ActionResult<IEnumerable<PointOfInterestDto>> GetPointsOfInterest(int cityId)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
         }
 
         [HttpGet("{pointOfInterestId}", Name = "GetPointOfInterest")]
-        public ActionResult<PointOfInterest> GetPointOfInterest(int cityId, int pointOfInterestId)
+        public ActionResult<PointOfInterestDto> GetPointOfInterest(int cityId, int pointOfInterestId)
         {
             var city = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == cityId);
 
@@ -65,7 +65,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
         }
 
         [HttpPost]
-        public ActionResult<PointOfInterest> CreatePointOfInterest(int cityId,  PointOfInterestForCreation pointOfInterest)
+        public ActionResult<PointOfInterestDto> CreatePointOfInterest(int cityId,  PointOfInterestForCreationDto pointOfInterest)
         {
             var city = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == cityId);
 
@@ -76,7 +76,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
 
             var maxPointOfInterestId = _citiesDataStore.Cities.SelectMany(c => c.PointsOfInterest).Max(p => p.Id);
 
-            var finalPointOfInterest = new PointOfInterest()
+            var finalPointOfInterest = new PointOfInterestDto()
             {
                 Id = ++maxPointOfInterestId,
                 Name = pointOfInterest.Name,
@@ -96,7 +96,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
 
         [HttpPut("{pointOfInterestId}")]
         public ActionResult UpdatePointOfInterest(int cityId, int pointOfInterestId, 
-            PointOfInterestForUpdate pointOfInterestForUpdate)
+            PointOfInterestForUpdateDto pointOfInterestForUpdate)
         {
             // If the city is not found, return 404
             var city = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == cityId);
@@ -121,7 +121,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
         // Requires Microsoft.AspNetCore.JsonPatch and Microsoft.AspNetCore.Mvc.NewtonsoftJson
         [HttpPatch("{pointOfInterestId}")]
         public ActionResult PartiallyUpdatePointOfInterest(int cityId, int pointOfInterestId,
-            JsonPatchDocument<PointOfInterestForUpdate> patchDocument)
+            JsonPatchDocument<PointOfInterestForUpdateDto> patchDocument)
         {
             var city = _citiesDataStore.Cities.FirstOrDefault(c => c.Id == cityId);
             if (city == null)
@@ -136,7 +136,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
             }
 
             var pointOfInterestToPatch =
-                new PointOfInterestForUpdate()
+                new PointOfInterestForUpdateDto()
                 {
                     Name = pointOfInterestFromStore.Name,
                     Description = pointOfInterestFromStore.Description

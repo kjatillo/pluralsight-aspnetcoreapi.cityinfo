@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.EntityFrameworkCore;
+using Pluralsight.AspNetCoreWebApi.CityInfo.DbContexts;
 using Pluralsight.AspNetCoreWebApi.CityInfo.Services;
 using Serilog;
 
@@ -36,8 +38,10 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
             builder.Services.AddProblemDetails();  // Custom reponse can also be added
 
             builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
-
             builder.Services.AddSingleton<CitiesDataStore>();
+
+            builder.Services.AddDbContext<CityInfoContext>(dbContextOptions =>
+                dbContextOptions.UseSqlite("Data Source=CityInfo.db"));
 
 #if DEBUG
             builder.Services.AddTransient<IMailService, LocalMailService>();

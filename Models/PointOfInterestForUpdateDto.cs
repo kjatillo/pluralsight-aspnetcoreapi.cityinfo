@@ -2,7 +2,7 @@
 
 namespace Pluralsight.AspNetCoreWebApi.CityInfo.Models
 {
-    public class PointOfInterestForUpdate
+    public class PointOfInterestForUpdateDto
     {
         [Required(ErrorMessage = "You should provide a name value.")]
         [MaxLength(50)]

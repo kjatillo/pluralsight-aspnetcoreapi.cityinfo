@@ -1,6 +1,6 @@
 ﻿namespace Pluralsight.AspNetCoreWebApi.CityInfo.Models
 {
-    public class City
+    public class CityDto
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
@@ -13,6 +13,6 @@
             }
         }
 
-        public ICollection<PointOfInterest> PointsOfInterest { get; set; } = new List<PointOfInterest>();
+        public ICollection<PointOfInterestDto> PointsOfInterest { get; set; } = new List<PointOfInterestDto>();
     }
 }
