@@ -7,6 +7,7 @@ E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Plura
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Pluralsight.AspNetCoreWebApi.CityInfo.runtimeconfig.json
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Pluralsight.AspNetCoreWebApi.CityInfo.dll
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Pluralsight.AspNetCoreWebApi.CityInfo.pdb
+E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\AutoMapper.dll
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Humanizer.dll
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
