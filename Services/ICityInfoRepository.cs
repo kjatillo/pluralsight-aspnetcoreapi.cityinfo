@@ -9,6 +9,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Services
         public Task<IEnumerable<PointOfInterest>> GetPointsOfInterestAsync(int cityId);
         public Task<PointOfInterest?> GetPointOfInterestAsync(int cityId, int pointOfInterestId);
         public Task AddPointOfInterestAsync(int cityId, PointOfInterest pointOfInterest);
+        public void DeletePointOfInterest(PointOfInterest pointOfInterest);
 
         // Utility Methods
         Task<bool> CityExistAsync(int cityId);

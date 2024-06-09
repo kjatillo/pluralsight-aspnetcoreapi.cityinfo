@@ -66,8 +66,7 @@
               "RelativeToolTip": "Profiles\\PointOfInterestProfile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T23:04:07.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-08T23:04:07.656Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "Profiles\\CityProfile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T22:55:44.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-08T22:55:44.712Z"
             },
             {
               "$type": "Document",
@@ -92,8 +90,7 @@
               "RelativeToolTip": "Entities\\PointOfInterest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T22:55:35.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-08T22:55:35.918Z"
             },
             {
               "$type": "Document",
@@ -105,8 +102,7 @@
               "RelativeToolTip": "Models\\CityDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T22:55:28.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-08T22:55:28.352Z"
             },
             {
               "$type": "Document",
@@ -116,7 +112,7 @@
               "RelativeDocumentMoniker": "Services\\CityInfoRepository.cs",
               "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\CityInfoRepository.cs",
               "RelativeToolTip": "Services\\CityInfoRepository.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAgwDkAAAAyAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAA1wDUAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-08T22:30:28.206Z",
               "EditorCaption": ""
@@ -129,7 +125,7 @@
               "RelativeDocumentMoniker": "Controllers\\PointsOfInterestController.cs",
               "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Controllers\\PointsOfInterestController.cs",
               "RelativeToolTip": "Controllers\\PointsOfInterestController.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAgwD0AAAAJAAAA",
+              "ViewState": "AQIAAHwAAAAAAAAAAAAiwI8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-08T22:23:45.225Z",
               "EditorCaption": ""
@@ -142,7 +138,7 @@
               "RelativeDocumentMoniker": "Services\\ICityInfoRepository.cs",
               "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\ICityInfoRepository.cs",
               "RelativeToolTip": "Services\\ICityInfoRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-08T22:18:45.483Z",
               "EditorCaption": ""
@@ -157,8 +153,7 @@
               "RelativeToolTip": "Controllers\\CitiesController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T22:05:29.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-08T22:05:29.897Z"
             }
           ]
         }

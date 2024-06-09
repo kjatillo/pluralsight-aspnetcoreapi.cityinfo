@@ -49,6 +49,11 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Services
             }
         }
 
+        public void DeletePointOfInterest(PointOfInterest pointOfInterest)
+        {
+            _context.PointsOfInterests.Remove(pointOfInterest);
+        }
+
         // Utility Methods
         public async Task<bool> CityExistAsync(int cityId)
         {
