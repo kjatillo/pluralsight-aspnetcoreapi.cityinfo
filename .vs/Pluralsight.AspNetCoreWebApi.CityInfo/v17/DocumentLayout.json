@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|e:\\programming\\.net\\pluralsight.aspnetcorewebapi.cityinfo\\controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|solutionrelative:controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|e:\\programming\\.net\\pluralsight.aspnetcorewebapi.cityinfo\\services\\cityinforepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|solutionrelative:services\\cityinforepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|solutionrelative:services\\icityinforepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|e:\\programming\\.net\\pluralsight.aspnetcorewebapi.cityinfo\\controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|solutionrelative:controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|e:\\programming\\.net\\pluralsight.aspnetcorewebapi.cityinfo\\services\\paginationmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E953D5D-ADB2-4601-8BAB-ED4A90B701FD}|Pluralsight.AspNetCoreWebApi.CityInfo.csproj|solutionrelative:services\\paginationmetadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,34 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ICityInfoRepository.cs",
-              "DocumentMoniker": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\ICityInfoRepository.cs",
-              "RelativeDocumentMoniker": "Services\\ICityInfoRepository.cs",
-              "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\ICityInfoRepository.cs",
-              "RelativeToolTip": "Services\\ICityInfoRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T16:37:24.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CityInfoRepository.cs",
-              "DocumentMoniker": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\CityInfoRepository.cs",
-              "RelativeDocumentMoniker": "Services\\CityInfoRepository.cs",
-              "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\CityInfoRepository.cs",
-              "RelativeToolTip": "Services\\CityInfoRepository.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAADwvxcAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T16:33:16.573Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:350743133:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
@@ -64,13 +42,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaginationMetadata.cs",
+              "DocumentMoniker": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\PaginationMetadata.cs",
+              "RelativeDocumentMoniker": "Services\\PaginationMetadata.cs",
+              "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\PaginationMetadata.cs",
+              "RelativeToolTip": "Services\\PaginationMetadata.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T16:47:57.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ICityInfoRepository.cs",
+              "DocumentMoniker": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\ICityInfoRepository.cs",
+              "RelativeDocumentMoniker": "Services\\ICityInfoRepository.cs",
+              "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\ICityInfoRepository.cs",
+              "RelativeToolTip": "Services\\ICityInfoRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T16:37:24.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CityInfoRepository.cs",
+              "DocumentMoniker": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\CityInfoRepository.cs",
+              "RelativeDocumentMoniker": "Services\\CityInfoRepository.cs",
+              "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Services\\CityInfoRepository.cs",
+              "RelativeToolTip": "Services\\CityInfoRepository.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAADwvzAAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T16:33:16.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "CitiesController.cs",
               "DocumentMoniker": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Controllers\\CitiesController.cs",
               "RelativeDocumentMoniker": "Controllers\\CitiesController.cs",
-              "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Controllers\\CitiesController.cs",
-              "RelativeToolTip": "Controllers\\CitiesController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAcwB8AAABgAAAA",
+              "ToolTip": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Controllers\\CitiesController.cs*",
+              "RelativeToolTip": "Controllers\\CitiesController.cs*",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAABiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T16:31:46.337Z",
               "EditorCaption": ""

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Pluralsight.AspNetCoreWebApi.CityInfo.Models;
 using Pluralsight.AspNetCoreWebApi.CityInfo.Services;
+using System.Text.Json;
 
 namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
 {
@@ -29,7 +30,10 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
                 pageSize = MAX_CITIES_PAGE_SIZE;
             }
 
-            var cities = await _cityInfoRepository.GetCitiesAsync(name, searchQuery, pageNumber, pageSize);
+            var (cities, paginationMetadata) = await _cityInfoRepository.GetCitiesAsync(name, searchQuery, pageNumber, pageSize);
+
+            Response.Headers.Append("X-Pagination", JsonSerializer.Serialize(paginationMetadata));
+
             return Ok(_mapper.Map<IEnumerable<CityWithoutPointsOfInterestDto>> (cities));
         }
 

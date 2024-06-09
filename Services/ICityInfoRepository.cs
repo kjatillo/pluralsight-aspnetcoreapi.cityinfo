@@ -5,7 +5,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Services
     public interface ICityInfoRepository
     {
         Task<IEnumerable<City>> GetCitiesAsync();
-        Task<IEnumerable<City>> GetCitiesAsync(string? name, string? searchQuery, int pageNumber, int pageSize);
+        Task<(IEnumerable<City>, PaginationMetadata)> GetCitiesAsync(string? name, string? searchQuery, int pageNumber, int pageSize);
         Task<City?> GetCityAsync(int cityId, bool includePointOfInterest);
         Task<IEnumerable<PointOfInterest>> GetPointsOfInterestAsync(int cityId);
         Task<PointOfInterest?> GetPointOfInterestAsync(int cityId, int pointOfInterestId);
