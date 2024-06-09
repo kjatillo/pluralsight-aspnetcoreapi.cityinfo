@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Pluralsight.AspNetCoreWebApi.CityInfo.DbContexts;
 using Pluralsight.AspNetCoreWebApi.CityInfo.Entities;
 
@@ -20,14 +19,8 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Services
         }
 
         // Overloaded get cities method for filtering
-        public async Task<IEnumerable<City>> GetCitiesAsync(string? name, string? searchQuery)
+        public async Task<IEnumerable<City>> GetCitiesAsync(string? name, string? searchQuery, int pageNumber, int pageSize)
         {
-            if (string.IsNullOrEmpty(name) && string.IsNullOrEmpty(searchQuery))
-            {
-                return await GetCitiesAsync();
-            }
-
-            // Collection to start from
             var collection = _context.Cities as IQueryable<City>;
 
             // Filter
@@ -45,7 +38,10 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Services
                     (a.Description != null && a.Description.Contains(searchQuery)));
             }
 
-            return await collection.OrderBy(c => c.Name).ToListAsync();
+            return await collection.OrderBy(c => c.Name)
+                .Skip(pageSize * (pageNumber - 1))
+                .Take(pageSize)
+                .ToListAsync();
         }
 
         public async Task<City?> GetCityAsync(int cityId, bool includePointsOfInterest)

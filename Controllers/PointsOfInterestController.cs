@@ -26,7 +26,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PointOfInterestDto>>> GetPointsOfInterestAsync(int cityId)
+        public async Task<ActionResult<IEnumerable<PointOfInterestDto>>> GetPointsOfInterest(int cityId)
         {
             if (!await _cityInfoRepository.CityExistAsync(cityId))
             {

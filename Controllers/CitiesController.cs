@@ -12,6 +12,8 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
         private readonly ICityInfoRepository _cityInfoRepository;
         private readonly IMapper _mapper;
 
+        const int MAX_CITIES_PAGE_SIZE = 20;
+
         public CitiesController(ICityInfoRepository cityInfoRepository, IMapper mapper)
         {
             _cityInfoRepository = cityInfoRepository ?? throw new ArgumentNullException(nameof(cityInfoRepository));
@@ -19,9 +21,15 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CityWithoutPointsOfInterestDto>>> GetCities(string? name, string? searchQuery)
+        public async Task<ActionResult<IEnumerable<CityWithoutPointsOfInterestDto>>> GetCitiesAsync(string? name, string? searchQuery,
+            int pageNumber = 1, int pageSize = 10)
         {
-            var cities = await _cityInfoRepository.GetCitiesAsync(name, searchQuery);
+            if (pageSize > MAX_CITIES_PAGE_SIZE)
+            {
+                pageSize = MAX_CITIES_PAGE_SIZE;
+            }
+
+            var cities = await _cityInfoRepository.GetCitiesAsync(name, searchQuery, pageNumber, pageSize);
             return Ok(_mapper.Map<IEnumerable<CityWithoutPointsOfInterestDto>> (cities));
         }
 
