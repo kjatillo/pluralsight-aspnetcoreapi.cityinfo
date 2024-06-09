@@ -14,6 +14,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Services
 
         // Utility Methods
         Task<bool> CityExistAsync(int cityId);
+        Task<bool> CityNameMatchesCityIdAsync(int cityId, string? cityName);
         Task<bool> SaveChangesAsync();
     }
 }

@@ -147,3 +147,6 @@ E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Micro
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

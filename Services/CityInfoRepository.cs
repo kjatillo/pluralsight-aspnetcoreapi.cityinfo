@@ -90,6 +90,11 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Services
             return await _context.Cities.AnyAsync(c => c.Id == cityId);
         }
 
+        public async Task<bool> CityNameMatchesCityIdAsync(int cityId, string? cityName)
+        {
+            return await _context.Cities.AnyAsync(c => c.Id == cityId && c.Name == cityName);
+        }
+
         public async Task<bool> SaveChangesAsync()
         {
             return (await _context.SaveChangesAsync()) > 0;

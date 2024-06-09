@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
 
 namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class FilesController : ControllerBase
     {

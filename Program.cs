@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Pluralsight.AspNetCoreWebApi.CityInfo.DbContexts;
 using Pluralsight.AspNetCoreWebApi.CityInfo.Services;
 using Serilog;
@@ -44,6 +45,21 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
 
             builder.Services.AddScoped<ICityInfoRepository, CityInfoRepository>();
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            
+            builder.Services.AddAuthentication("Bearer")
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new()
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = builder.Configuration["Authentication:Issuer"],  // Accepts token create by the API itself only
+                        ValidAudience = builder.Configuration["Authentication:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(
+                            Convert.FromBase64String(builder.Configuration["Authentication:SecretForKey"]))
+                    };
+                });
 
 #if DEBUG
             builder.Services.AddTransient<IMailService, LocalMailService>();
@@ -69,6 +85,8 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
             app.UseHttpsRedirection();
 
             app.UseRouting();  // Where the endpoint is selected
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

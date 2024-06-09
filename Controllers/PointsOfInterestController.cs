@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Pluralsight.AspNetCoreWebApi.CityInfo.Entities;
@@ -8,6 +9,7 @@ using Pluralsight.AspNetCoreWebApi.CityInfo.Services;
 namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/cities/{cityId}/[controller]")]
     public class PointsOfInterestController : ControllerBase
     {
@@ -28,6 +30,13 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PointOfInterestDto>>> GetPointsOfInterest(int cityId)
         {
+            var cityName = User.Claims.FirstOrDefault(c => c.Type == "city")?.Value;
+
+            if (!await _cityInfoRepository.CityNameMatchesCityIdAsync(cityId, cityName))
+            {
+                return Forbid();
+            }
+
             if (!await _cityInfoRepository.CityExistAsync(cityId))
             {
                 _logger.LogInformation($"City with {cityId} does not exist.");

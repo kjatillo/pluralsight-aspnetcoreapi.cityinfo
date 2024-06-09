@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Pluralsight.AspNetCoreWebApi.CityInfo.Models;
 using Pluralsight.AspNetCoreWebApi.CityInfo.Services;
@@ -7,6 +8,7 @@ using System.Text.Json;
 namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/[controller]")]  // use [Route("api/cities")] to make the route more specific, controller takes the name of the controller class
     public class CitiesController : ControllerBase
     {
