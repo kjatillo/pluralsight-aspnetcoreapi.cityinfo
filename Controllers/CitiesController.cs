@@ -19,9 +19,9 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CityDto>>> GetCities()
+        public async Task<ActionResult<IEnumerable<CityWithoutPointsOfInterestDto>>> GetCities(string? name, string? searchQuery)
         {
-            var cities = await _cityInfoRepository.GetCitiesAsync();
+            var cities = await _cityInfoRepository.GetCitiesAsync(name, searchQuery);
             return Ok(_mapper.Map<IEnumerable<CityWithoutPointsOfInterestDto>> (cities));
         }
 

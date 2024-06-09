@@ -4,12 +4,13 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Services
 {
     public interface ICityInfoRepository
     {
-        public Task<IEnumerable<City>> GetCitiesAsync();
-        public Task<City?> GetCityAsync(int cityId, bool includePointOfInterest);
-        public Task<IEnumerable<PointOfInterest>> GetPointsOfInterestAsync(int cityId);
-        public Task<PointOfInterest?> GetPointOfInterestAsync(int cityId, int pointOfInterestId);
-        public Task AddPointOfInterestAsync(int cityId, PointOfInterest pointOfInterest);
-        public void DeletePointOfInterest(PointOfInterest pointOfInterest);
+        Task<IEnumerable<City>> GetCitiesAsync();
+        Task<IEnumerable<City>> GetCitiesAsync(string? name, string? searchQuery);
+        Task<City?> GetCityAsync(int cityId, bool includePointOfInterest);
+        Task<IEnumerable<PointOfInterest>> GetPointsOfInterestAsync(int cityId);
+        Task<PointOfInterest?> GetPointOfInterestAsync(int cityId, int pointOfInterestId);
+        Task AddPointOfInterestAsync(int cityId, PointOfInterest pointOfInterest);
+        void DeletePointOfInterest(PointOfInterest pointOfInterest);
 
         // Utility Methods
         Task<bool> CityExistAsync(int cityId);
