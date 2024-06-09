@@ -142,3 +142,8 @@ E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\obj\Debug\net8.0\refin
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\obj\Debug\net8.0\Pluralsight.AspNetCoreWebApi.CityInfo.pdb
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\obj\Debug\net8.0\Pluralsight.AspNetCoreWebApi.CityInfo.genruntimeconfig.cache
 E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\obj\Debug\net8.0\ref\Pluralsight.AspNetCoreWebApi.CityInfo.dll
+E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\Programming\.NET\Pluralsight.AspNetCoreWebApi.CityInfo\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
