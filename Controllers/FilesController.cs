@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
 
 namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
 {
-    [Route("api/[controller]")]
-    [Authorize]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    // [Authorize]
     [ApiController]
     public class FilesController : ControllerBase
     {
@@ -14,11 +15,12 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
         public FilesController(FileExtensionContentTypeProvider fileExtensionContentTypeProvider)
         {
             _fileExtensionContentTypeProvider = fileExtensionContentTypeProvider
-                ?? throw new System.ArgumentException(nameof(fileExtensionContentTypeProvider));
+                ?? throw new System.ArgumentNullException(nameof(fileExtensionContentTypeProvider));
         }
 
         [HttpGet("{fieldId}")]
-        public IActionResult GetFile(string fileId)
+        [ApiVersion(0.1, Deprecated = true)]
+        public ActionResult GetFile(string fileId)
         {
             var pathToFile = "getting-started-with-rest-slides.pdf";
 
@@ -37,6 +39,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
         }
 
         [HttpPost]
+        [ApiVersion(1)]
         public async Task<ActionResult> CreateFileAsync(IFormFile file)
         {
             // Validate the input. Put a limit on filesize to avoid large uploads attacks. 

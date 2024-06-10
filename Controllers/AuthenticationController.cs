@@ -83,7 +83,7 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
             // For demo purposes, we assume the credentials are valid
 
             // return a new CityInfoUser (values would normally come from your user DB/table)
-            return new CityInfoUser(1, userName ?? "", "John", "Smith", "Dublin");
+            return new CityInfoUser(1, userName ?? "", "John", "Smith", "Antwerp");
         }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pluralsight.AspNetCoreWebApi.CityInfo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47cf2471b3c29a7cb2cdb08bf7c14ce350dcc00b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e8d7936c3f7b1ff7c70b779730d09e3b92ea772")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pluralsight.AspNetCoreWebApi.CityInfo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pluralsight.AspNetCoreWebApi.CityInfo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

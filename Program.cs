@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -60,6 +61,13 @@ namespace Pluralsight.AspNetCoreWebApi.CityInfo
                             Convert.FromBase64String(builder.Configuration["Authentication:SecretForKey"]))
                     };
                 });
+
+            builder.Services.AddApiVersioning(setupAction =>
+            {
+                setupAction.ReportApiVersions = true;
+                setupAction.AssumeDefaultVersionWhenUnspecified = true;
+                setupAction.DefaultApiVersion = new ApiVersion(1, 0);
+            }).AddMvc();
 
 #if DEBUG
             builder.Services.AddTransient<IMailService, LocalMailService>();

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Hj0YzWosY80=",
+  "dgSpecHash": "YoPAsKbgDYk=",
   "success": true,
   "projectFilePath": "E:\\Programming\\.NET\\Pluralsight.AspNetCoreWebApi.CityInfo\\Pluralsight.AspNetCoreWebApi.CityInfo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Keneith\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
+    "C:\\Users\\Keneith\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",
+    "C:\\Users\\Keneith\\.nuget\\packages\\asp.versioning.mvc\\8.1.0\\asp.versioning.mvc.8.1.0.nupkg.sha512",
     "C:\\Users\\Keneith\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Keneith\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Keneith\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.6\\microsoft.aspnetcore.authentication.jwtbearer.8.0.6.nupkg.sha512",

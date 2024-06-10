@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Asp.Versioning;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Pluralsight.AspNetCoreWebApi.CityInfo.Models;
@@ -7,9 +8,11 @@ using System.Text.Json;
 
 namespace Pluralsight.AspNetCoreWebApi.CityInfo.Controllers
 {
+    [Route("api/v{version:apiVersion}/[controller]")]  // use [Route("api/cities")] to make the route more specific, controller takes the name of the controller class
     [ApiController]
-    [Authorize]
-    [Route("api/[controller]")]  // use [Route("api/cities")] to make the route more specific, controller takes the name of the controller class
+    // [Authorize]
+    [ApiVersion(1)]
+    [ApiVersion(2)]
     public class CitiesController : ControllerBase
     {
         private readonly ICityInfoRepository _cityInfoRepository;
